@@ -95,7 +95,7 @@
       "currentRange": "Proud",
       "enabled": "Zapnuto",
       "energy": "Energie",
-      "feedinPrice": "Výkupní cena",
+      "feedinPrice": "Cena za výkup energie",
       "gridPrice": "Cena ze sítě",
       "heaterTempLimit": "Limit topení",
       "hemsType": "System",
@@ -435,6 +435,7 @@
       "title": "Sponzorství",
       "tokenRequired": "Před vytvořením tohoto zařízení musíte nakonfigurovat sponzorský token.",
       "tokenRequiredLearnMore": "Zjistit více.",
+      "tokenRequiredShort": "Nebyl přidán sponzorský token.",
       "trialToken": "Zkušební token"
     },
     "system": {
@@ -619,6 +620,10 @@
   },
   "header": {
     "about": "O",
+    "authProviders": {
+      "confirmLogout": "Opravdu chcete odpojit {title}?",
+      "title": "Stav autorizace"
+    },
     "blog": "Blog",
     "docs": "Dokumentace",
     "github": "GitHub",
@@ -861,8 +866,8 @@
       "connected": "Připojeno.",
       "disconnectRequired": "Relace byla ukončena. Prosím, připojte se znovu.",
       "disconnected": "Odpojeno.",
-      "feedinPriorityNextStart": "Vysoký tarif začne za {duration}.",
-      "feedinPriorityPausing": "Nabíjení z FVE pozastaveno pro maximální využití distribuční sítě.",
+      "feedinPriorityNextStart": "Vysoká cena výkupu začne za {duration}.",
+      "feedinPriorityPausing": "Nabíjení z FVE pozastaveno pro maximální dodávku do distribuční sítě.",
       "finished": "Dokončeno.",
       "minCharge": "Okamžité nabíjení na {soc}.",
       "pvDisable": "Nedostatečný přebytek. Nabíjení bude brzy pozastaveno.",
@@ -1060,11 +1065,11 @@
   },
   "smartFeedInPriority": {
     "activeHoursLabel": "Pozastaveno",
-    "description": "Pozastaví nabíjení během vysokých cen pro efektivní výhodné použití distribuční sítě.",
-    "priceLabel": "Cena dodávky energie",
-    "priceLimit": "Cenový strop pro dodávku energie",
-    "resetWarning": "Nenastavili jste žádný dynamický tarif dodávky energie. Přesto je nastavení limit {limit}. Zkontrolujte konfiguraci.",
-    "title": "Priorita dodávky energie"
+    "description": "Pozastaví nabíjení pro maximalizaci výdělečné dodávky do distribuční sítě.",
+    "priceLabel": "Cena výkupu energie",
+    "priceLimit": "Cenový strop pro výkup energie",
+    "resetWarning": "Nenastavili jste žádný dynamický tarif výkupu energie. Přesto je nastavení limit {limit}. Zkontrolujte konfiguraci.",
+    "title": "Priorita výkupu energie"
   },
   "startupError": {
     "configFile": "Konfigurační soubor užívá:",
