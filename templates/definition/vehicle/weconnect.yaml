@@ -1,0 +1,38 @@
+template: weconnect
+products:
+  - brand: Volkswagen
+    description:
+      generic: We Connect
+requirements:
+  description:
+    de: |
+      e-Golf, e-Up, ID Familie
+
+      Meldet sich über den Geräte-Autorisierungs-Flow (Device Authorization Flow)
+      bei der VW We Connect API an und liest die Fahrzeugdaten aus dem
+      CARIAD-Backend. Die Anmeldung erfolgt mit den Zugangsdaten der
+      Volkswagen-App / We Connect.
+
+      Hinweis: Volkswagen ändert den Anmeldeprozess regelmäßig. Sollte die
+      Anmeldung fehlschlagen, kann alternativ die EU-Data-Act-Integration
+      (Vorlage "Volkswagen") verwendet werden.
+    en: |
+      e-Golf, e-Up, ID family
+
+      Signs in to the VW We Connect API using the device authorization flow and
+      reads vehicle data from the CARIAD backend. Log in with the credentials of
+      the Volkswagen app / We Connect.
+
+      Note: Volkswagen changes the login process regularly. If the login fails,
+      the EU Data Act integration (template "Volkswagen") can be used instead.
+params:
+  - preset: vehicle-base
+  - name: vin
+    example: WVWZZZ...
+  - name: timeout
+render: |
+  type: weconnect
+  {{ include "base" . }}
+  {{- if .timeout }}
+  timeout: {{ .timeout }}
+  {{- end }}
